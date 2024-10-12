@@ -2,7 +2,7 @@ package main
 
 import (
 	"fetch/gofetch"
-	"fmt"
+	// "fmt"
 	"os"
 	"os/user"
 )
