@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fetch/pwul"
-	"fetch/utils"
+	"teafetch/pwul"
+	"teafetch/utils"
 	"fmt"
 	"os"
 	"os/user"

@@ -1,4 +1,4 @@
-module fetch
+module teafetch
 
 go 1.23.1
 
