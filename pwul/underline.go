@@ -1,4 +1,4 @@
-package gofetch
+package PWUL
 
 import (
 	"fmt"

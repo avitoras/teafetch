@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fetch/gofetch"
+	"fetch/pwul"
+	"fetch/utils"
 	"fmt"
 	"os"
 	"os/user"
 	"runtime"
-	// "strings"
 	"github.com/shirou/gopsutil/v4/host"
 )
 
@@ -15,14 +15,13 @@ func main() {
 	username, _ := user.Current()
 	hostname, _ := os.Hostname()
 	userhost := username.Username + "@" + hostname
-	gofetch.PrintWithUnderline(userhost)
+	PWUL.PrintWithUnderline(userhost)
 
 	// OS
 	dist, _, version, _ := host.PlatformInformation()
-	fmt.Println("OS:", dist, version)
+	fmt.Println("OS:", utils.CapitalizeFirstLetter(dist), version)
 
 	// Kernel
-	// kernel, _ := runtime.GOOS
 	kernelver, _ := host.KernelVersion()
-	fmt.Println("Kernel:", runtime.GOOS,kernelver)
+	fmt.Println("Kernel:", utils.CapitalizeFirstLetter(runtime.GOOS),kernelver)
 }
